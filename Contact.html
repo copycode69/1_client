@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - BNA Wood Carvings</title>
+    <style>
+      body {
+        font-family: plus Jakarta Sans, plus Jakarta Sans;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #444;
+        padding: 10px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      nav a:hover {
+        background-color: #555;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+      }
+
+      .contact-info,
+      .contact-form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .contact-info div {
+        flex: 1;
+      }
+
+      .contact-info h2,
+      .contact-form h2 {
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+      }
+
+      .contact-info p,
+      .contact-info a {
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .contact-info a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .contact-info a:hover {
+        color: #555;
+      }
+
+      .contact-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .contact-form input[type="text"],
+      .contact-form input[type="email"],
+      .contact-form textarea {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      .contact-form textarea {
+        resize: vertical;
+        height: 150px;
+      }
+
+      .contact-form button {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .contact-form button:hover {
+        background-color: #555;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+      }
+
+      .map {
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .contact-info {
+          flex-direction: column;
+        }
+
+        .map iframe {
+          width: 100%;
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us - BNA Wood Carvings</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Shop.html">Shop</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+      <section class="contact-info">
+        <div>
+          <h2>Contact Information</h2>
+          <p><strong>Address:</strong> Agonda, Canacona, South Goa 403702</p>
+          <p><strong>Phone:</strong> +91 9920777197</p>
+          <p>
+            <strong>Email:</strong>
+            <a href="bnawoodcarvings@gmail.com">bnawoodcarvings@gmail.com</a>
+          </p>
+          <p>
+            <strong>Business Hours:</strong><br />
+            Mon - Fri: 9:00 AM - 5:00 PM<br />
+            Sat: 10:00 AM - 2:00 PM<br />
+            Sun: Closed
+          </p>
+        </div>
+        <div>
+          <h2>Find Us Here</h2>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093744!2d144.96315761550657!3d-37.81627974201167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727a1dbd0e2b0!2sFederation+Square!5e0!3m2!1sen!2sau!4v1510916844204"
+              width="100%"
+              height="300"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <input type="text" id="subject" placeholder="Subject" required />
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 BNA Wood Carvings. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Your message has been sent!");
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wood Carving Art Store</title>
+    <style>
+      body {
+        font-family: plus Jakarta Sans, plus Jakarta Sans;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #444;
+        padding: 10px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      nav a:hover {
+        background-color: #555;
+      }
+
+      .hero {
+        background: url("https://images.pexels.com/photos/172276/pexels-photo-172276.jpeg?cs=srgb&dl=pexels-fwstudio-33348-172276.jpg&fm=jpg") no-repeat center
+          center/cover;
+        color: #fff;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero h2 {
+        font-size: 3rem;
+        margin: 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .product {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .product:hover {
+        transform: translateY(-5px);
+      }
+
+      .product img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      .product h3 {
+        margin: 10px 0;
+        font-size: 1.5rem;
+      }
+
+      .product p {
+        color: #666;
+      }
+
+      .product button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .product button:hover {
+        background-color: #555;
+      }
+
+      .cart {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .cart h2 {
+        margin: 0 0 20px;
+        font-size: 1.8rem;
+      }
+
+      .cart-items {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .cart-items li {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .cart-total {
+        font-size: 1.5rem;
+        text-align: right;
+        margin-top: 20px;
+      }
+
+      .cart-empty {
+        text-align: center;
+        color: #888;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .hero h2 {
+          font-size: 2rem;
+        }
+
+        nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>BNA Wood Carvings</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Shop.html">Shop</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+
+    <section class="hero">
+      <h2>Exquisite Wood Carvings for Your Home</h2>
+    </section>
+
+    <div class="container">
+      <section class="products" id="shop">
+        <div class="product" data-name="Wooden Batman 6.5in" data-price="7000">
+          <img src="Images/Batman front.jpg" alt="Wooden Batman 6.5in" />
+          <h3>Wooden Batman 6.5in</h3>
+          <p>Beautiful hand-carved wooden Batman sculpture.</p>
+          <p>Rs.6750.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Zloy" data-price="4000">
+          <img src="Images/Zloy front.jpg" alt="Zloy" />
+          <h3>Wooden Zloy 4.5in</h3>
+          <p>Beautiful hand-carved wooden Zloy sculpture..</p>
+          <p>Rs.4480.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Cross" data-price="1800">
+          <img
+            src="Images/photo_2024-07-10_17-38-54.jpg"
+            alt="Wooden JESUS Cross"
+          />
+          <h3>Wooden JESUS Cross</h3>
+          <p>A stunning piece of art for any room.</p>
+          <p>Rs.2016.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Menorah" data-price="15000">
+          <img src="Images/Menorah1.jpg" alt="Wooden Eagle" />
+          <h3>Menorah</h3>
+          <p>Majestic hand-carved Menorah candle stand.</p>
+          <p>Rs.10080.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Owl" data-price="5000">
+          <img src="Images/Cross bookmark.jpg" alt="Wooden Owl" />
+          <h3>Cross Bible Bookmark</h3>
+          <p>Elegant hand-carved Cross Bookmark for your Bible.</p>
+          <p>Rs.600.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Deer" data-price="12000">
+          <img src="Images/Deer.jpg" alt="Wooden Deer" />
+          <h3>Wooden Deer 10in</h3>
+          <p>Graceful hand-carved deer sculpture.</p>
+          <p>Rs.12000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Lion" data-price="17000">
+          <img src="Images/Lion.jpg" alt="Wooden Lion" />
+          <h3>Wooden Lion 14in</h3>
+          <p>Powerful hand-carved lion sculpture.</p>
+          <p>Rs.17000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Wolf" data-price="11000">
+          <img src="Images/Wolf.jpg" alt="Wooden Wolf" />
+          <h3>Wooden Wolf 9in</h3>
+          <p>Beautiful hand-carved wolf sculpture.</p>
+          <p>Rs.11000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Bear" data-price="13000">
+          <img src="Images/Bear.jpg" alt="Wooden Bear" />
+          <h3>Wooden Bear 12in</h3>
+          <p>Strong hand-carved bear sculpture.</p>
+          <p>Rs.13000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Horse" data-price="16000">
+          <img src="Images/Horse.jpg" alt="Wooden Horse" />
+          <h3>Wooden Horse 15in</h3>
+          <p>Elegant hand-carved horse sculpture.</p>
+          <p>Rs.16000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Dragon" data-price="25000">
+          <img src="Images/Dragon.jpg" alt="Wooden Dragon" />
+          <h3>Wooden Dragon 20in</h3>
+          <p>Intricate hand-carved dragon sculpture.</p>
+          <p>Rs.25000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Elephant" data-price="18000">
+          <img src="Images/Elephant.jpg" alt="Wooden Elephant" />
+          <h3>Wooden Elephant 16in</h3>
+          <p>Majestic hand-carved elephant sculpture.</p>
+          <p>Rs.18000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Giraffe" data-price="15000">
+          <img src="Images/Giraffe.jpg" alt="Wooden Giraffe" />
+          <h3>Wooden Giraffe 14in</h3>
+          <p>Graceful hand-carved giraffe sculpture.</p>
+          <p>Rs.15000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Tiger" data-price="20000">
+          <img src="Images/Tiger.jpg" alt="Wooden Tiger" />
+          <h3>Wooden Tiger 18in</h3>
+          <p>Fierce hand-carved tiger sculpture.</p>
+          <p>Rs.20000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Panda" data-price="14000">
+          <img src="Images/Panda.jpg" alt="Wooden Panda" />
+          <h3>Wooden Panda 12in</h3>
+          <p>Cute hand-carved panda sculpture.</p>
+          <p>Rs.14000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Phoenix" data-price="22000">
+          <img src="Images/Phoenix.jpg" alt="Wooden Phoenix" />
+          <h3>Wooden Phoenix 20in</h3>
+          <p>Mythical hand-carved phoenix sculpture.</p>
+          <p>Rs.22000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Buddha" data-price="19000">
+          <img src="Images/Buddha.jpg" alt="Wooden Buddha" />
+          <h3>Wooden Buddha 17in</h3>
+          <p>Peaceful hand-carved Buddha sculpture.</p>
+          <p>Rs.19000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Angel" data-price="20000">
+          <img src="Images/Angel.jpg" alt="Wooden Angel" />
+          <h3>Wooden Angel 18in</h3>
+          <p>Heavenly hand-carved angel sculpture.</p>
+          <p>Rs.20000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Mermaid" data-price="21000">
+          <img src="Images/Mermaid.jpg" alt="Wooden Mermaid" />
+          <h3>Wooden Mermaid 19in</h3>
+          <p>Enchanting hand-carved mermaid sculpture.</p>
+          <p>Rs.21000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Samurai" data-price="23000">
+          <img src="Images/Samurai.jpg" alt="Wooden Samurai" />
+          <h3>Wooden Samurai 22in</h3>
+          <p>Warrior hand-carved samurai sculpture.</p>
+          <p>Rs.23000.00</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Wooden Buddha" data-price="19000">
+          <img src="Images/Buddha.jpg" alt="Wooden Buddha" />
+          <h3>Wooden Buddha 17in</h3>
+          <p>Peaceful hand-carved Buddha sculpture.</p>
+          <p>Rs.19000.00</p>
+          <button>Add to Cart</button>
+        </div>
+      </section>
+
+      <section class="cart">
+        <h2>Your Cart</h2>
+        <ul class="cart-items">
+          <li class="cart-empty">Your cart is empty</li>
+        </ul>
+        <div class="cart-total">Total: $0.00</div>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 BNA Wood Carvings. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const cart = [];
+      const cartItemsContainer = document.querySelector(".cart-items");
+      const cartTotalContainer = document.querySelector(".cart-total");
+      const cartEmptyMessage = document.querySelector(".cart-empty");
+
+      function updateCart() {
+        cartItemsContainer.innerHTML = "";
+        let total = 0;
+
+        if (cart.length === 0) {
+          cartItemsContainer.appendChild(cartEmptyMessage);
+        } else {
+          cart.forEach((item, index) => {
+            const cartItem = document.createElement("li");
+            cartItem.innerHTML = `
+                        ${item.name} - $${item.price} 
+                        <button onclick="removeFromCart(${index})">Remove</button>
+                    `;
+            cartItemsContainer.appendChild(cartItem);
+            total += item.price;
+          });
+        }
+
+        cartTotalContainer.innerText = `Total: $${total.toFixed(2)}`;
+      }
+
+      function addToCart(product) {
+        const productName = product.dataset.name;
+        const productPrice = parseFloat(product.dataset.price);
+
+        cart.push({ name: productName, price: productPrice });
+        updateCart();
+      }
+
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+      }
+
+      document.querySelectorAll(".product button").forEach((button) => {
+        button.addEventListener("click", () => {
+          addToCart(button.parentElement);
+        });
+      });
+
+      updateCart();
+    </script>
+  </body>
+</html>

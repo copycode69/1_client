@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BNA Wood Carvings - Home</title>
+    <style>
+      body {
+        font-family: plus Jakarta Sans, plus Jakarta Sans;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #444;
+        padding: 10px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      nav a:hover {
+        background-color: #555;
+      }
+
+      .hero {
+        background: url("https://images.pexels.com/photos/172276/pexels-photo-172276.jpeg?cs=srgb&dl=pexels-fwstudio-33348-172276.jpg&fm=jpg") no-repeat center
+          center/cover;
+        color: #fff;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      .hero h2 {
+        font-size: 3rem;
+        margin: 0;
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        margin-top: 10px;
+      }
+
+      .hero button {
+        background-color: #333;
+        color: white;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 1.2rem;
+      }
+
+      .hero button:hover {
+        background-color: #555;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+      }
+
+      .intro {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .intro h2 {
+        margin-bottom: 15px;
+        font-size: 2rem;
+      }
+
+      .intro p {
+        font-size: 1.2rem;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .video-section {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .video-section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .video-section video {
+        width: 100%;
+        max-width: 800px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .products-section {
+        margin-bottom: 40px;
+      }
+
+      .products-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .product {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .product:hover {
+        transform: translateY(-5px);
+      }
+
+      .product img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      .product h3 {
+        margin: 10px 0;
+        font-size: 1.5rem;
+      }
+
+      .product p {
+        color: #666;
+      }
+
+      .product button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .product button:hover {
+        background-color: #555;
+      }
+
+      .cta {
+        background: #444;
+        color: #fff;
+        text-align: center;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .cta h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .cta p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+      }
+
+      .cta button {
+        background-color: #333;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+
+      .cta button:hover {
+        background-color: #555;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .hero h2 {
+          font-size: 2.5rem;
+        }
+
+        .hero p {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Wood Carving Art Store</h1>
+    </header>
+
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="Shop.html">Shop</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+
+    <section class="hero">
+      <h2>Welcome to BNA Wood Carvings</h2>
+      <p>Discover the beauty of handcrafted wood art</p>
+      <button onclick="window.location.href='#shop'">Shop Now</button>
+    </section>
+
+    <div class="container">
+      <section class="intro">
+        <h2>Our Craftsmanship</h2>
+        <p>
+          At BNA Wood Carvings, we bring you the finest collection of
+          handcrafted wood carvings. Each piece is meticulously created by a
+          skilled artist who pours his heart and soul into his work. Explore our
+          collections and find the perfect piece to enhance your home or office.
+        </p>
+      </section>
+
+      <section class="video-section">
+        <h2>Watch Our Craftsmanship in Action</h2>
+        <video controls>
+          <source
+            src="videos\WhatsApp Video 2024-08-28 at 17.15.34_ffcc6136.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section class="products-section">
+        <h2>Featured Products</h2>
+        <div class="products">
+          <div class="product">
+            <img src="Images/Batman front.jpg" alt="Wooden Batman" />
+            <h3>Wooden Batman</h3>
+            <p>Rs.6750</p>
+            <button>Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="Images/Zloy front.jpg" alt="Wooden Zloy" />
+            <h3>Wooden Zloy</h3>
+            <p>Rs.4480</p>
+            <button>Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="Images/photo_2024-07-10_17-38-54.jpg" alt="JESUS Cross" />
+            <h3>JESUS Cross</h3>
+            <p>Rs.2016</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <h2>Bring Art into Your Home</h2>
+        <p>
+          Our exquisite wood carvings are the perfect addition to any room.
+          Don't miss out on owning a piece of timeless art.
+        </p>
+        <button onclick="window.location.href='#shop'">Explore More</button>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 BNA Wood Carvings. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
