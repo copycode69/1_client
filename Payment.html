@@ -57,22 +57,89 @@
       .checkout-button:hover {
         background-color: #218838;
       }
+
+      .payment-options {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+      }
+
+      .payment-options img {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        border: 2px solid transparent;
+      }
+
+      .payment-options img.selected {
+        border-color: #28a745;
+      }
     </style>
   </head>
   <body>
     <div class="payment-container">
       <h2>Scan to Pay</h2>
+
+      <div class="payment-options">
+        <img
+          src="Images/upi.jpg"
+          alt="UPI"
+          id="upi"
+          class="payment-option selected"
+        />
+        <img
+          src="Images/phonepe.jpg"
+          alt="PhonePe"
+          id="phonepe"
+          class="payment-option"
+        />
+        <img
+          src="Images/googlepay.jpg"
+          alt="Google Pay"
+          id="googlepay"
+          class="payment-option"
+        />
+      </div>
+
       <img
-        src="/mnt/data/WhatsApp Image 2024-08-28 at 18.32.46_c222ef38.jpg"
+        src="Images/QRcode.jpg"
         alt="QR Code"
+        id="qrCodeImage"
       />
+
       <div class="amount-due">Amount Due: Rs. <span id="amount">0.00</span></div>
       <button class="checkout-button" id="generate-receipt">Generate Receipt</button>
     </div>
 
     <script>
+      // Retrieve the total amount from localStorage
       const amount = localStorage.getItem("cartTotal") || "0.00";
       document.getElementById("amount").innerText = amount;
+
+      const qrCodeImage = document.getElementById("qrCodeImage");
+      const paymentOptions = document.querySelectorAll(".payment-option");
+
+      paymentOptions.forEach(option => {
+        option.addEventListener("click", () => {
+          paymentOptions.forEach(opt => opt.classList.remove("selected"));
+          option.classList.add("selected");
+
+          switch (option.id) {
+            case "upi":
+              qrCodeImage.src = "Images/QRcode.jpg";
+              break;
+            case "phonepe":
+              qrCodeImage.src = "Images/PhonePeQR.jpg"; // Replace with actual PhonePe QR code image
+              break;
+            case "googlepay":
+              qrCodeImage.src = "Images/GooglePayQR.jpg"; // Replace with actual Google Pay QR code image
+              break;
+            default:
+              qrCodeImage.src = "Images/QRcode.jpg";
+          }
+        });
+      });
 
       document.getElementById("generate-receipt").addEventListener("click", () => {
         const receiptWindow = window.open("", "Receipt", "width=600,height=400");
